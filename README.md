@@ -20,7 +20,7 @@ Follow the instructions below to set up and run **Laradock** on your machine.
 -------------------------
 
 1. Clone the **Laradock(Laravel)** repository and open the project.
-```bash
+    ```bash
     cd laravel-laradock
     ```
 
