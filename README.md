@@ -24,8 +24,12 @@ Follow the instructions below to set up and run **Laradock** on your machine.
 
 2. Open the **Laradock** directory inside the **Laradock(Laravel)** project.
 
+    ```bash
+    cd laradock
+    ```
 
-3. Open your **terminal** and enter the following command to install PostgreSQL on your machine:
+
+3. Open your **terminal** and enter the following command run the project:
     
     ```bash
     docker-compose up -d nginx workspace php-fpm mysql phpmyadmin
