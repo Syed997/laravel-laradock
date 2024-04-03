@@ -1,66 +1,128 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Robi Shareholder Management System (RSMS)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**Robi Shareholder Management System** or **RSMS** in short is a stakeholder management system designed to oversee and control the stakeholders associated with **<a href="https://www.robi.com.bd/en">Robi Axiata</a>**.
 
-## About Laravel
+## Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+-------------------------
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Stakeholders have the capability to generate reports, access investment details, configure and calculate dividend data, maintain records of dividend warrants, and generate tax certificates, with the option to circulate them via email.
+- Enables dynamic Stakeholder Profiling and fetching all the data on-the-fly for a completely adaptable profile.
+## Getting Started
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+-------------------------
 
-## Learning Laravel
+Follow the instructions below to set up and run **RSMS** on your machine.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Prerequisites
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- **Python Version 3.7 or above.** [Download Python](https://www.python.org/downloads/)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **PyCharm IDE (Community Edition or Professional).** [Download PyCharm IDE](https://www.jetbrains.com/pycharm/)
+  
+- **PostgreSQL 12 or above.** [Get PostgresSQL](https://www.postgresql.org/)
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Setting the stage
 
-### Premium Partners
+-------------------------
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+1. Clone the **RSMS** repository.
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+2. Open the RSMS repository on your **PyCharm IDE**.
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+3. You will be prompted to create a Virtual Environment on your project directory. **Accept** and a new **.venv** directory containing the Virtual Environment will be generated.
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+-------------------------
 
-## License
+### PostgreSQL Setup for Ubuntu
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- Open your **terminal** and enter the following command to install PostgreSQL on your machine:
+    
+    ```bash
+    sudo apt install postgresql
+    ```
+- To start the **Postgres** server, use the following command:
+
+    ```bash
+    sudo -i -u postgres
+    ```
+
+- To enter the terminal-based front-end to PostgreSQL:
+    ```bash
+    psql
+    ```
+- To create your own role, database and change ownership of the newly database:
+
+    ```bash
+    CREATE DATABASE your_database_name;
+    ```
+    ```bash
+    CREATE USER your_username WITH PASSWORD 'your_password';
+    ```
+    ```bash
+    GRANT ALL PRIVILEGES ON DATABASE your_database_name TO your_username;
+    ```
+    ```bash
+    ALTER DATABASE your_database_name OWNER TO your_username;
+    ```
+    **Reminder:** Input each command individually, entering them sequentially.
+
+### PostgreSQL Setup for Windows
+
+- [Download PostgreSQL](https://www.postgresql.org/download/windows/) and install it.
+
+- Add **PostgreSQL**’s bin directory (by default: **C:\Program Files\PostgreSQL\<version>\bin**) to the PATH.
+
+- Create a **postgres** user with a password using the pg admin gui:
+
+- Open **pgAdmin**.
+
+  - Double-click the server to create a connection.
+
+  - Select Object ‣ Create ‣ Login/Group Role.
+
+  - Enter the **username** in the Role Name field (e.g.: odoo).
+
+  - Open the **Definition** tab, enter a **password** (e.g.: odoo), and click **Save**.
+
+  - Open the **Privileges** tab and switch **Can login?** to **Yes** and **Create database?** to **Yes**.
+
+-------------------------
+4. Make a copy of **rsms_sample.conf** as **rsms.conf** in the same directory.
+
+    **Note 1:** Use the same **database name**, **database user/role and password** you used during **PostgreSQL Setup** on your local machine.
+
+    **Note 2:** Look at the image below to get a reference on how to set up your own **config file**.
+
+
+![rsms.conf sample](https://i.ibb.co/vhSrjq3/Screenshot-from-2023-12-14-11-05-28.png)
+
+
+#### Fig 1: Config File Example
+
+5. Select **Edit Configuration** for the config file
+    - add your_preferred_name
+    - add the **odoo.bin** file path on the **script** field
+    - set the working directory to the project directory
+    - add the following line on the **Script Parameter** field:
+
+    ```bash
+    -c rsms.conf -u shareholder_management
+    ```
+-------------------------
+
+### Installing Dependencies on Ubuntu
+- Open **terminal** on the IDE, navigate to the rsms directory if you are not already in it, and execute the following commands:
+    ```bash
+    sudo apt install python3-pip libldap2-dev libpq-dev libsasl2-dev
+    ```
+   and then,
+    ```bash
+    pip3 install -r requirements.txt
+    ```
+   **Note:** Both commands need to be executed separately one after the other.
+
