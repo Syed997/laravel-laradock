@@ -30,6 +30,7 @@ Follow the instructions below to set up and run **Laradock** on your machine.
     ```bash
     docker-compose up -d nginx workspace php-fpm mysql phpmyadmin
     ```
+4. The project is running on **Localhost:90**
 
 
 -------------------------
