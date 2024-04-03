@@ -1,0 +1,14 @@
+docker.vm:80 172.25.0.1 - - [03/Apr/2024:11:14:29 +0000] "GET / HTTP/1.1" 200 953 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+[httpd:access] localhost:80 - - 172.25.0.1 - - [03/Apr/2024:11:14:29 +0000] "GET / HTTP/1.1" 200 bytesIn:1491 bytesOut:953 reqTime:0
+docker.vm:80 172.25.0.1 - - [03/Apr/2024:11:14:29 +0000] "GET /icons/blank.gif HTTP/1.1" 200 431 "http://localhost/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+[httpd:access] localhost:80 - - 172.25.0.1 - - [03/Apr/2024:11:14:29 +0000] "GET /icons/blank.gif HTTP/1.1" 200 bytesIn:1417 bytesOut:431 reqTime:0
+docker.vm:80 172.25.0.1 - - [03/Apr/2024:11:14:29 +0000] "GET /icons/text.gif HTTP/1.1" 200 512 "http://localhost/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+[httpd:access] localhost:80 - - 172.25.0.1 - - [03/Apr/2024:11:14:29 +0000] "GET /icons/text.gif HTTP/1.1" 200 bytesIn:1416 bytesOut:512 reqTime:0
+docker.vm:80 172.25.0.1 - - [03/Apr/2024:11:14:29 +0000] "GET /icons/folder.gif HTTP/1.1" 200 508 "http://localhost/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+[httpd:access] localhost:80 - - 172.25.0.1 - - [03/Apr/2024:11:14:29 +0000] "GET /icons/folder.gif HTTP/1.1" 200 bytesIn:1418 bytesOut:508 reqTime:0
+docker.vm:80 172.25.0.1 - - [03/Apr/2024:11:14:29 +0000] "GET /icons/unknown.gif HTTP/1.1" 200 529 "http://localhost/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+[httpd:access] localhost:80 - - 172.25.0.1 - - [03/Apr/2024:11:14:29 +0000] "GET /icons/unknown.gif HTTP/1.1" 200 bytesIn:1418 bytesOut:529 reqTime:0
+docker.vm:80 172.25.0.1 - - [03/Apr/2024:11:14:29 +0000] "GET /favicon.ico HTTP/1.1" 404 228 "http://localhost/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+[httpd:access] localhost:80 - - 172.25.0.1 - - [03/Apr/2024:11:14:29 +0000] "GET /favicon.ico HTTP/1.1" 404 bytesIn:1413 bytesOut:228 reqTime:0
+docker.vm:80 172.28.0.1 - - [03/Apr/2024:11:16:05 +0000] "GET / HTTP/1.1" 200 953 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+[httpd:access] localhost:80 - - 172.28.0.1 - - [03/Apr/2024:11:16:05 +0000] "GET / HTTP/1.1" 200 bytesIn:1517 bytesOut:953 reqTime:0
