@@ -40,6 +40,25 @@ Follow the instructions below to set up and run **Laradock** on your machine.
 4. The project is running on **Localhost:90**
 
 
+5. Enter into the workspace container:
+    
+    ```bash
+    docker exec -it {container-id} bash
+    ```
+    you will be on a new terminal:
+    
+    ```bash
+    /var/www#
+    ```
+
+
+6. To check the database connection write this command on the new terminal (/var/www#) :
+    
+    ```bash
+    php artisan migrate:fresh
+    ```
+
+
 -------------------------
 
 ## Setting the Port
