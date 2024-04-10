@@ -1,4 +1,4 @@
-# *
-# !.gitignore
-# !ignition.css
-# !ignition.js
+*
+!.gitignore
+!ignition.css
+!ignition.js
