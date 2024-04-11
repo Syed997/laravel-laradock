@@ -21,7 +21,9 @@ class KafkaQueue extends Queue implements QueueConstract
 
     public function push($job, $data = '', $queue = null)
     {
-
+        $topic = $this->producer->newTopic($queue);
+        $topic->produce(RD_KAFKA_PARTITION_UA, 0, serialize($job));
+        $this->producer->flush(5000);
     }
 
     public function pushRaw($payload, $queue = null, array $options = [])
