@@ -434,8 +434,8 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'v10.3.3',
+            'version' => '10.3.3.0',
             'reference' => null,
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
