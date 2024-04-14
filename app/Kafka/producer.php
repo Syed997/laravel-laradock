@@ -13,7 +13,7 @@ $producer = new \RdKafka\Producer($conf);
 while (true) {
     $message = readline("Write a message: ");
 
-    $topic = $producer->newTopic('my-topic');
+    $topic = $producer->newTopic('demo');
     $topic->produce(RD_KAFKA_PARTITION_UA, 0, $message);
     $producer->flush(1000);
 }

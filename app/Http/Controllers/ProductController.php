@@ -17,6 +17,7 @@ class ProductController extends Controller
     {
         $products = Product::create($request->only('product_name', 'product_stock'));
         $productName = $request->input('product_name');
+        $conf = new \RdKafka\Conf();
 
         $conf = new \RdKafka\Conf();
 
@@ -27,12 +28,14 @@ class ProductController extends Controller
         $conf->set('sasl.password', 'A077549RjBGY5Jg8w4sXbeYRGrJiSsuazrPxnpCJlj19IWujQjJ2tMufipQjkFry');
 
         $producer = new \RdKafka\Producer($conf);
-        $message = $productName;
 
-        $topic = $producer->newTopic('my-topic');
-        $topic->produce(RD_KAFKA_PARTITION_UA, 0, $message);
-        $producer->flush(1000);
+        // while (true) {
+            $message = $productName;
 
+            $topic = $producer->newTopic('demo');
+            $topic->produce(RD_KAFKA_PARTITION_UA, 0, $message);
+            $producer->flush(5000);
+        // }
 
         return response($products, Response::HTTP_OK);
     }

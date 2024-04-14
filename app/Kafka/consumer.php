@@ -12,10 +12,10 @@ $conf->set('auto.offset.reset', 'earliest');
 
 $consumer = new \RdKafka\KafkaConsumer($conf);
 
-$consumer->subscribe(['my-topic']);
+$consumer->subscribe(['demo']);
 
 while (true) {
-    $message = $consumer->consume(5000);
+    $message = $consumer->consume(120*1000);
 
     var_dump($message->payload);
     // sleep(2);
