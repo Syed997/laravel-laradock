@@ -12,12 +12,15 @@ $conf->set('auto.offset.reset', 'earliest');
 
 $consumer = new \RdKafka\KafkaConsumer($conf);
 
-$consumer->subscribe(['demo']);
+$consumer->subscribe(['sample_topic']);
 
 while (true) {
     $message = $consumer->consume(120*1000);
 
-    var_dump($message->payload);
-    // sleep(2);
+    var_dump("message: ".$message->payload. ", partition: ".$message->partition) ;
+    sleep(5);
 
 }
+
+
+
